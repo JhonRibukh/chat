@@ -1,0 +1,28 @@
+﻿<Window x:Class="ChatWPF.Client"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="672" Width="576" Closing="Window_Closing">
+    <Grid Background="#FFFF7878">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="488*"/>
+            <RowDefinition Height="89*"/>
+        </Grid.RowDefinitions>
+
+        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Width="NaN" Name="MessagesLbx" Background="#FF5B5151"></ListBox>
+        <Button Grid.Row="0" Grid.Column="1" Margin="10,10,10,10" Content="Выйти" FontSize="20" Click="LogOutChat_Button_Click" Background="#FF9A0303" BorderBrush="#FF480A00"/>
+
+        <ListBox Grid.Column="1" Width="NaN" Name="ClientsLbx" Margin="0,79,0,0" Grid.RowSpan="2" Background="#FFFDB4B4"/>
+
+        <TextBox Grid.Row="2" Grid.Column="0" Name="MessageTxt" Margin="10,10,10,10" Background="#FF5B5151" />
+        <Button Content="Отправить" Grid.Row="2" Grid.Column="1" Click="Send_User_Message" Margin="10,10,10,10" FontSize="20" Background="#FFFDB4B4" BorderBrush="Red"/>
+    </Grid>
+</Window>
